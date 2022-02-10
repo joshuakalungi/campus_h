@@ -1,3 +1,4 @@
+import 'package:campush/HOME/placePicker/places.dart';
 import 'package:flutter/material.dart';
 import 'Constants/constants.dart';
 import 'placePicker/stf.dart';
@@ -19,7 +20,7 @@ class HomePagex extends StatelessWidget {
             title: 'placePicker',
             bgColor: kLightYellow,
             iconColor: kDarkYellow,
-            destination: stf(),
+            destination: places(),
           ),
           MenuEntry(
             iconData: Icons.pending_actions_rounded,

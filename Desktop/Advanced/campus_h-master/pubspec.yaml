@@ -40,6 +40,10 @@ dependencies:
   url_launcher: ^6.0.18
   http: ^0.13.4
   geolocator: ^8.1.0
+  place_picker: ^0.9.19
+  google_places_picker: ^3.0.2
+  google_maps_place_picker_mb: ^2.0.0-mb.13
+  
  
 
 dev_dependencies:
