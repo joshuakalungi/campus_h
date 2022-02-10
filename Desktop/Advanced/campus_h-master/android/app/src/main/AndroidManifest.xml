@@ -8,6 +8,11 @@
         android:label="campush"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <!-- Add your Google Maps API Key here -->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyCX7vI-UAjpQsj4o2cjlm4VHKlwntoFXRs"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -35,4 +40,5 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 </manifest>
