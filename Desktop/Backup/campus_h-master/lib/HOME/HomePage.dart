@@ -1,4 +1,5 @@
 import 'package:campush/HOME/Reccomendations.dart';
+import 'package:campush/HOME/Settings.dart';
 import 'package:campush/HOME/placePicker/stf.dart';
 import 'package:flutter/material.dart';
 import 'DashBoard.dart';
@@ -88,8 +89,8 @@ class _HomeState extends State<Home> {
                   size: 30,
                 ),
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => stf()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Settings()));
                 },
                 color: Colors.black,
               ),
