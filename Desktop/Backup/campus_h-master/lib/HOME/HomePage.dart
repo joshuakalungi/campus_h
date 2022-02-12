@@ -1,9 +1,9 @@
 import 'package:campush/HOME/Reccomendations.dart';
-import 'package:campush/HOME/Settings.dart';
+import 'package:campush/HOME/UserProfile/pages/profile_page.dart';
 import 'package:campush/HOME/placePicker/stf.dart';
 import 'package:flutter/material.dart';
 import 'DashBoard.dart';
-import 'UserProfile/pages/profile_page.dart';
+import 'Settings.dart';
 
 class HomePage extends StatelessWidget {
   @override

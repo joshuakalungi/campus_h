@@ -1,9 +1,11 @@
-import 'package:campush/HOME/noter/notice.dart';
+import 'package:campush/HOME/Weather/pages/main_screen.dart';
 import 'package:campush/HOME/placePicker/places.dart';
 import 'package:campush/HOME/refereees/flutterref.dart';
-import 'package:campush/liveLocation/map.dart';
 import 'package:flutter/material.dart';
 import 'Constants/constants.dart';
+import 'Weather/main.dart';
+import 'Weather/pages/loadingScreen.dart';
+import 'noter/notice.dart';
 import 'placePicker/stf.dart';
 
 class HomePagex extends StatelessWidget {
@@ -30,7 +32,7 @@ class HomePagex extends StatelessWidget {
             title: 'liveLocation',
             bgColor: kLightRed,
             iconColor: kDarkRed,
-            destination: GoogleMapsPage(),
+            destination: stf(),
           ),
           MenuEntry(
             iconData: Icons.timer_10_select_rounded,
@@ -45,6 +47,13 @@ class HomePagex extends StatelessWidget {
             bgColor: kLightBlue,
             iconColor: kDarkBlue,
             destination: refPage(),
+          ),
+          MenuEntry(
+            iconData: Icons.timer_10_select_rounded,
+            title: 'Weather',
+            bgColor: kLightBlue,
+            iconColor: kDarkBlue,
+            destination: Coolet(),
           ),
           MenuEntry(
             iconData: Icons.timer_10_select_rounded,

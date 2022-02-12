@@ -17,8 +17,6 @@ Future<void> main() async {
   );
 }
 
-final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
