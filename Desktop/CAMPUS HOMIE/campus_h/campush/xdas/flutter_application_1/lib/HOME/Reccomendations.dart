@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/HOME/chat/chat.dart';
 import 'Constants/constants.dart';
-import 'Weather/main.dart';
 import 'placePicker/stf.dart';
 
 class HomePagex extends StatelessWidget {
@@ -27,7 +27,7 @@ class HomePagex extends StatelessWidget {
             title: 'Chatify',
             bgColor: kLightRed,
             iconColor: kDarkRed,
-            destination: stf(),
+            destination: ChannelListPage(),
           ),
           MenuEntry(
             iconData: Icons.timer_10_select_rounded,

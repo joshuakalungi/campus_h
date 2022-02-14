@@ -1,13 +1,26 @@
 import 'dart:async';
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 
 import 'HOME/Splash.dart';
 
 void main() async {
-  
-  runApp(const MyApp());
+  final client = StreamChatClient(
+    'ws37nuwk249r',
+    logLevel: Level.INFO,
+  );
+
+  await client.connectUser(
+    User(id: 'jecxi256'),
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiamVjeGkyNTYifQ.XDxtfrT1oPmaIipKGb0O4d0KbHZ_zs0iWT9VUzL-fC0',
+  );
+
+  runApp(MyApp(
+    client: client,
+  ));
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
@@ -16,7 +29,11 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({
+    Key? key,
+    required this.client,
+  }) : super(key: key);
+  final StreamChatClient client;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +42,10 @@ class MyApp extends StatelessWidget {
       title: 'Loading Animation',
       home: const HomePage(),
       theme: ThemeData(primarySwatch: Colors.blue),
+      builder: (context, child) => StreamChat(
+        client: client,
+        child: child,
+      ),
     );
   }
 }
@@ -135,7 +156,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     fifthController.forward();
 
     super.initState();
-    Timer(const Duration(seconds: 5), openSplash);
+    Timer(const Duration(seconds: 3), openSplash);
   }
 
   @override
