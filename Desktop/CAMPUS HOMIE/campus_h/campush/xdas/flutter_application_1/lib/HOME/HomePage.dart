@@ -89,8 +89,8 @@ class _HomeState extends State<Home> {
                   size: 30,
                 ),
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => stf()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Settings()));
                 },
                 color: Colors.black,
               ),
