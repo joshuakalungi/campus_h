@@ -41,6 +41,7 @@ class _HomeState extends State<Home> {
               padding: EdgeInsets.all(15),
               child: Text('Recommendations',
                   style: TextStyle(
+                    color: Colors.black,
                     fontFamily: 'assets\font\RobotoSlab-Regular.ttf',
                     fontSize: 22,
                     fontWeight: FontWeight.bold,

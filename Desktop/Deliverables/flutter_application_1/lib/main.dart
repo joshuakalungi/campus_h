@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
+import 'package:flutter/material.dart' as TextTheme;
 
 import 'HOME/Splash.dart';
 
@@ -37,14 +38,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = ThemeData(
-      primarySwatch: Colors.green,
-    );
+    // final theme = ThemeData(
+    //   primarySwatch: Colors.green,
+    // );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Loading Animation',
+      theme: ThemeData(
+        // Define the default brightness and colors.
+        brightness: Brightness.dark,
+        primaryColor: Colors.lightGreen[800],
+
+        // Define the default font family.
+        fontFamily: 'Georgia',
+
+        // Define the default `TextTheme`. Use this to specify the default
+        // text styling for headlines, titles, bodies of text, and more.
+        textTheme: const TextTheme.TextTheme(
+          headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+        ),
+      ),
       home: const HomePage(),
-      theme: ThemeData(primarySwatch: Colors.green),
+      //   theme: ThemeData(primarySwatch: Colors.green),
       builder: (context, child) => StreamChat(
         client: client,
         child: child,

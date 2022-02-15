@@ -116,7 +116,7 @@ class _MapViewState extends State<MapView> {
           suffixIcon: suffixIcon,
           labelText: label,
           filled: true,
-          fillColor: Colors.white,
+          fillColor: Colors.transparent,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(10.0),
@@ -459,7 +459,8 @@ class _MapViewState extends State<MapView> {
                         children: <Widget>[
                           Text(
                             'Findme',
-                            style: TextStyle(fontSize: 20.0),
+                            style:
+                                TextStyle(color: Colors.black, fontSize: 20.0),
                           ),
                           SizedBox(height: 10),
                           _textField(
