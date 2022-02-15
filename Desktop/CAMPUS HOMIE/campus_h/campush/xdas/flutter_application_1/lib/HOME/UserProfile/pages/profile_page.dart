@@ -37,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.w700,
-                      color: Color.fromRGBO(64, 105, 225, 1),
+                      color: Colors.black,
                     ),
                   ))),
           InkWell(
@@ -72,7 +72,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w500,
-                  color: Colors.grey,
+                  color: Colors.black,
                 ),
               ),
               SizedBox(
@@ -84,7 +84,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   decoration: BoxDecoration(
                       border: Border(
                           bottom: BorderSide(
-                    color: Colors.grey,
+                    color: Colors.black,
                     width: 1,
                   ))),
                   child: Row(children: [
@@ -99,7 +99,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             ))),
                     Icon(
                       Icons.keyboard_arrow_right,
-                      color: Colors.grey,
+                      color: Colors.black,
                       size: 40.0,
                     )
                   ]))
@@ -117,7 +117,7 @@ class _ProfilePageState extends State<ProfilePage> {
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w500,
-              color: Colors.grey,
+              color: Colors.black,
             ),
           ),
           const SizedBox(height: 1),
@@ -127,7 +127,7 @@ class _ProfilePageState extends State<ProfilePage> {
               decoration: BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
-                color: Colors.grey,
+                color: Colors.black,
                 width: 1,
               ))),
               child: Row(children: [
@@ -149,7 +149,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ))))),
                 Icon(
                   Icons.keyboard_arrow_right,
-                  color: Colors.grey,
+                  color: Colors.black,
                   size: 40.0,
                 )
               ]))

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/HOME/Weather/main.dart';
 import 'package:flutter_application_1/HOME/chat/chat.dart';
+import 'package:flutter_application_1/HOME/noter/home.dart';
 import 'Constants/constants.dart';
 import 'placePicker/stf.dart';
 
@@ -34,14 +36,14 @@ class HomePagex extends StatelessWidget {
             title: 'Location Notepad',
             bgColor: kLightBlue,
             iconColor: kDarkBlue,
-            destination: stf(),
+            destination: Home(),
           ),
           MenuEntry(
             iconData: Icons.timer_10_select_rounded,
             title: 'Weather',
             bgColor: kLightBlue,
             iconColor: kDarkBlue,
-            destination: stf(),
+            destination: Coolet(),
           ),
         ],
       ),

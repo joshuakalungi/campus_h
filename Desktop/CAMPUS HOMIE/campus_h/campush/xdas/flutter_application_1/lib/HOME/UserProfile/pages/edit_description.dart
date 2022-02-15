@@ -37,7 +37,7 @@ class _EditDescriptionFormPageState extends State<EditDescriptionFormPage> {
                 SizedBox(
                     width: 350,
                     child: const Text(
-                      "What type of passenger\nare you?",
+                      "What type of student\nare you?",
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     )),
@@ -64,7 +64,7 @@ class _EditDescriptionFormPageState extends State<EditDescriptionFormPage> {
                                   EdgeInsets.fromLTRB(10, 15, 10, 100),
                               hintMaxLines: 3,
                               hintText:
-                                  'Write a little bit about yourself. Do you like chatting? Are you a smoker? Do you bring pets with you? Etc.'),
+                                  'Write a little bit about yourself. Do you like chatting? Are you a singer? Do you have anything special? Etc.'),
                         ))),
                 Padding(
                     padding: EdgeInsets.only(top: 50),

@@ -37,11 +37,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = ThemeData(
+      primarySwatch: Colors.green,
+    );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Loading Animation',
       home: const HomePage(),
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.green),
       builder: (context, child) => StreamChat(
         client: client,
         child: child,
