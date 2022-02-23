@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/HOME/placePicker/stf.dart';
 import 'DashBoard.dart';
 import 'Reccomendations.dart';
 import 'Settings.dart';
@@ -28,10 +27,18 @@ class _HomeState extends State<Home> {
         "2dce9db4cc93264ded31a41c11f85eda2e956eca572e1d8b807a3e2338fdd0dc/stage");
 
     /// Handle commands from Alan Studio
-    AlanVoice.onCommand.add((command) {
-      debugPrint("got new command ${command.toString()}");
-    });
+    AlanVoice.onCommand.add((command) => _handleCommand(command.data));
   }
+  void _handleCommand(Map<String, dynamic> command) {
+    switch (command["command"]) {
+      case "mapforward":
+        Navigator.pushNamed(context, '/MapViewRoute');
+        break;
+      default:
+        debugPrint("unknown command");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

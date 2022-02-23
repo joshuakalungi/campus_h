@@ -3,10 +3,14 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_1/HOME/Weather/main.dart';
+import 'package:flutter_application_1/HOME/chat/chat.dart';
+import 'package:flutter_application_1/HOME/placePicker/stf.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 import 'package:flutter/material.dart' as TextTheme;
 
 import 'HOME/Splash.dart';
+import 'HOME/noter/home.dart';
 
 void main() async {
   final client = StreamChatClient(
@@ -28,6 +32,8 @@ void main() async {
     ),
   );
 }
+
+final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
 class MyApp extends StatelessWidget {
   const MyApp({
@@ -60,8 +66,15 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
         ),
       ),
+      navigatorObservers: [routeObserver],
+      initialRoute: '/',
+      routes: {
+        '/HomeRoute': (context) => Home(),
+        '/CooletRoute': (context) => Coolet(),
+        '/ChannelListPageRoute': (context) => ChannelListPage(),
+        '/MapViewRoute': (context) => MapView(),
+      },
       home: const HomePage(),
-      //   theme: ThemeData(primarySwatch: Colors.green),
       builder: (context, child) => StreamChat(
         client: client,
         child: child,

@@ -1,9 +1,7 @@
+import 'package:alan_voice/alan_voice.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/HOME/Weather/main.dart';
-import 'package:flutter_application_1/HOME/chat/chat.dart';
-import 'package:flutter_application_1/HOME/noter/home.dart';
+import 'package:flutter_application_1/main.dart';
 import 'Constants/constants.dart';
-import 'placePicker/stf.dart';
 
 class HomePagex extends StatefulWidget {
   const HomePagex({Key? key}) : super(key: key);
@@ -24,8 +22,7 @@ class _HomePagexState extends State<HomePagex> {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MapView()));
+                  Navigator.pushNamed(context, '/MapViewRoute');
                 },
                 child: Container(
                     decoration: BoxDecoration(
@@ -51,10 +48,7 @@ class _HomePagexState extends State<HomePagex> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => ChannelListPage()));
+                  Navigator.pushNamed(context, '/ChannelListPageRoute');
                 },
                 child: Container(
                     decoration: BoxDecoration(
@@ -80,8 +74,7 @@ class _HomePagexState extends State<HomePagex> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Home()));
+                  Navigator.pushNamed(context, '/HomeRoute');
                 },
                 child: Container(
                     decoration: BoxDecoration(
@@ -106,8 +99,7 @@ class _HomePagexState extends State<HomePagex> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Coolet()));
+                  Navigator.pushNamed(context, '/CooletRoute');
                 },
                 child: Container(
                     decoration: BoxDecoration(
