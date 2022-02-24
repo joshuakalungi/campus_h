@@ -489,10 +489,15 @@ class _MapViewState extends State<MapView> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          Text(
-                            'Findme',
-                            style:
-                                TextStyle(color: Colors.black, fontSize: 20.0),
+                          GestureDetector(
+                            onDoubleTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text(
+                              'Findme',
+                              style: TextStyle(
+                                  color: Colors.black, fontSize: 20.0),
+                            ),
                           ),
                           SizedBox(height: 10),
                           _textField(
