@@ -21,6 +21,17 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((_) => setVisuals("first"));
+  }
+
+  void setVisuals(String screen) {
+    var visual = "{\"screen\": \"$screen\"}";
+    AlanVoice.setVisualState(visual);
+  }
+
   _HomeState() {
     /// Init Alan Button with project key from Alan Studio
     AlanVoice.addButton(
@@ -33,6 +44,9 @@ class _HomeState extends State<Home> {
     switch (command["command"]) {
       case "mapforward":
         Navigator.pushNamed(context, '/MapViewRoute');
+        break;
+      case "mapback":
+        Navigator.pop(context);
         break;
       default:
         debugPrint("unknown command");

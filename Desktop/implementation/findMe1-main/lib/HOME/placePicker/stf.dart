@@ -1,3 +1,4 @@
+import 'package:alan_voice/alan_voice.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/HOME/Constants/Secrets.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
@@ -6,6 +7,8 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'dart:math' show cos, sqrt, asin;
+
+import '../../main.dart';
 
 void main() => runApp(MapViewPage());
 
@@ -45,7 +48,35 @@ class MapView extends StatefulWidget {
   _MapViewState createState() => _MapViewState();
 }
 
-class _MapViewState extends State<MapView> {
+class _MapViewState extends State<MapView> with RouteAware {
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute);
+  }
+
+  @override
+  void dispose() {
+    routeObserver.unsubscribe(this);
+    super.dispose();
+  }
+
+  @override
+  void didPush() {
+    setVisuals("second");
+  }
+
+  @override
+  void didPop() {
+    setVisuals("first");
+  }
+
+  @override
+  void setVisuals(String screen) {
+    var visual = "{\"screen\": \"$screen\"}";
+    AlanVoice.setVisualState(visual);
+  }
+
   CameraPosition _initialLocation = CameraPosition(
     target: LatLng(0.333488, 32.568202),
     zoom: 15,
